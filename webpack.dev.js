@@ -9,6 +9,10 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    output: {
+     libraryTarget: 'var',
+     library: 'Client'
+ },
     module: {
         rules: [
             {
@@ -22,12 +26,12 @@ module.exports = {
            }
         ]
     },
-       plugins: [
+    plugins: [
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
             filename: "./index.html",
         }),
-           /*
+        /*
         new MiniCssExtractPlugin({ 
             filename: "[name].css" 
         }),
