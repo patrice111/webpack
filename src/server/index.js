@@ -36,7 +36,7 @@ app.get('/test', function (req, res) {
 });
 
   app.post("/article", async (req, res) => {
-    const resp = await fetch(`${baseUrl}${API_KEY}&lang=auto&url=${req.body}`);
+    const resp = await fetch(`${baseUrl}${API_KEY}&lang=auto&url=${req.body.url}`);
   
     try {
       const data = await resp.json();
