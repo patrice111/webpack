@@ -1,6 +1,6 @@
 //import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
-import { urlChecker } from './js/urlChecker'
+import { checkUrl } from './js/urlChecker'
 
 
 import './styles/resets.scss'
@@ -10,7 +10,7 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 export {
-    urlChecker,
+    checkUrl,
     handleSubmit
    }
 
