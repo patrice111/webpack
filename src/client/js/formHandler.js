@@ -2,7 +2,7 @@ function handleSubmit(event) {
     event.preventDefault()
     // check what text was put into the form field
     let formText = document.getElementById('url').value
-    if(checkUrl(formText))
+    if(Client.checkUrl(formText))
     console.log("::: Form Submitted :::")
 
     
@@ -18,11 +18,11 @@ function handleSubmit(event) {
         return res.json()
     })
     .then(function(res) {
-        document.getElementById('Positive').innerHTML =res.score_tag
+        //document.getElementById('Positive').innerHTML =res.score_tag
         document.getElementById("positive").innerHTML = `Positive: ${res.positive}`;
         document.getElementById("neutral").innerHTML = `Neutral: ${res.neutral}`;
         document.getElementById("negative").innerHTML = `Negative: ${res.negative}`;
-        document.getElementById("without_sentiment").innerHTML = `Without Sentiment: ${res.without_sentiment}`;
+        document.getElementById("without sentiment").innerHTML = `Without Sentiment: ${res.without_sentiment}`;
     })
 }
 
