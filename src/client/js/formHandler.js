@@ -18,7 +18,6 @@ function handleSubmit(event) {
         return res.json()
     })
     .then(function(res) {
-        //document.getElementById('Positive').innerHTML =res.score_tag
         document.getElementById("positive").innerHTML = `Positive: ${res.positive}`;
         document.getElementById("neutral").innerHTML = `Neutral: ${res.neutral}`;
         document.getElementById("negative").innerHTML = `Negative: ${res.negative}`;
